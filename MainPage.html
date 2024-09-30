@@ -4,18 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FutureScape Art Gallery</title>
-    <link rel="stylesheet" href="CSS.css"> <!-- CSS file -->
+    <link rel="stylesheet" href="CSS.css"> <!-- Correct reference to CSS file -->
 </head>
 <body>
     <div id="starfield"></div>
     <div class="content">
-        <h1> <span class="Welcome-text">Welcome to FutureScape</span>
-             <span class="divider-line"></span>
-             <span class="studio-text">Art Gallery & Studio</span>       
+        <h1>
+            <span class="Welcome-text">Welcome to FutureScape</span>
+            <span class="divider-line"></span>
+            <span class="studio-text">Art Gallery & Studio</span>       
         </h1>
-        <p>Explore the mysteries of art, AI, science and the beauty of nature.</p>
-        <button class="button-90s">Start</button> <!-- 90s style button -->
+        <p>Explore the mysteries of art, AI, science, and the beauty of nature.</p>
+        <button class="button-90s" onclick="showCategories()">Start</button> <!-- Correctly formatted Start button -->
     </div>
-    <script src="JavaScript.js"></script> <!-- JavaScript file -->
+
+    <!-- Category Section (Initially hidden) -->
+    <div id="categories" class="hidden">
+        <h2>Explore Categories</h2>
+        <ul>
+            <li><button class="button-90s" onclick="showDescription('art-gallery')">Art Gallery</button></li>
+            <li><button class="button-90s" onclick="showDescription('futurescape-worlds')">FutureScape Worlds</button></li>
+            <li><button class="button-90s" onclick="showDescription('exclusive-collections')">Exclusive Collections</button></li>
+        </ul>
+    </div>
+
+    <!-- Individual Category Descriptions (Initially hidden) -->
+    <div id="art-gallery" class="category-description hidden">
+        <h3>Art Gallery</h3>
+        <p>Welcome to our digital art space. Here, you'll find diverse artworks from surrealism to modern minimalism.</p>
+    </div>
+
+    <div id="futurescape-worlds" class="category-description hidden">
+        <h3>FutureScape Worlds</h3>
+        <p>Immerse yourself in futuristic, themed worlds. Step into Natureverse, a world where the organic meets the digital.</p>
+    </div>
+
+    <div id="exclusive-collections" class="category-description hidden">
+        <h3>Exclusive Collections</h3>
+        <p>Unlock rare and limited-edition digital art pieces in our exclusive collections. Own a part of the future with NFTs.</p>
+    </div>
+
+    <script src="JavaScript.js"></script> <!-- Ensure the correct file name and path for the JavaScript file -->
 </body>
 </html>
